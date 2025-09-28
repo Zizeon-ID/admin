@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - PILKOSIS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Panel - PILKOSIS</h1>
+        <p>Kelola Data Paslon dan Lihat Hasil Voting</p>
+    </header>
+
+    <main>
+        <div class="admin-container">
+            <section class="edit-section">
+                <h2>Edit Paslon</h2>
+                <div class="paslon-forms">
+                    <div class="paslon-form" id="form1">
+                        <h3>Paslon 1</h3>
+                        <label>Nama: <input type="text" id="name1"></label>
+                        <label>Deskripsi: <input type="text" id="desc1"></label>
+                        <label>Foto: <input type="file" id="img1" accept="image/*"></label>
+                        <img id="preview1" src="" alt="Preview" style="width: 100px; height: 100px; object-fit: cover;">
+                    </div>
+                    <div class="paslon-form" id="form2">
+                        <h3>Paslon 2</h3>
+                        <label>Nama: <input type="text" id="name2"></label>
+                        <label>Deskripsi: <input type="text" id="desc2"></label>
+                        <label>Foto: <input type="file" id="img2" accept="image/*"></label>
+                        <img id="preview2" src="" alt="Preview" style="width: 100px; height: 100px; object-fit: cover;">
+                    </div>
+                    <div class="paslon-form" id="form3">
+                        <h3>Paslon 3</h3>
+                        <label>Nama: <input type="text" id="name3"></label>
+                        <label>Deskripsi: <input type="text" id="desc3"></label>
+                        <label>Foto: <input type="file" id="img3" accept="image/*"></label>
+                        <img id="preview3" src="" alt="Preview" style="width: 100px; height: 100px; object-fit: cover;">
+                    </div>
+                    <div class="paslon-form" id="form4">
+                        <h3>Paslon 4</h3>
+                        <label>Nama: <input type="text" id="name4"></label>
+                        <label>Deskripsi: <input type="text" id="desc4"></label>
+                        <label>Foto: <input type="file" id="img4" accept="image/*"></label>
+                        <img id="preview4" src="" alt="Preview" style="width: 100px; height: 100px; object-fit: cover;">
+                    </div>
+                </div>
+                <button id="saveBtn">Simpan Perubahan</button>
+            </section>
+
+            <section class="results-section">
+                <h2>Hasil Voting</h2>
+                <button id="refreshBtn">Refresh Data</button>
+                <div class="results-content">
+                    <canvas id="pieChart" width="400" height="400"></canvas>
+                    <div id="voteCounts"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>
